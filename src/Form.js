@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-export const Form = () => {
+export const Form = ({onAddLang}) => {
   const [text, setText] = useState('');
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(`submitForm: ${text}`);
+    // console.log(`submitForm: ${text}`);
+    onAddLang(text); //親コンポーネントにデータを渡す
   }
   return(
     <div>
