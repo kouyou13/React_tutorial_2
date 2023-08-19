@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {List} from "./List";
 import {Form} from "./Form";
-import { LANGUAGES } from "./const/languages";
+import { getLanguages } from "./const/languages";
 
 function App() {
   // const [description, setDescription] = useState('クリック前の表示');
   const [tab, setTab] = useState('list');
-  const [langs, setLangs] = useState(LANGUAGES);
+  const [langs, setLangs] = useState([]);
 
-  // const changeDescription = () => {
-  //   setDescription("クリック後の表示です");
-  // }
+  useEffect(() => {
+    console.log('App.js:useEffect');
+    fetchLanguages(); //APIから取得するイメージ
+  }, []);
+
+  const fetchLanguages = async () => {
+    const languages = await getLanguages(); 
+    setLangs(languages);
+  };
 
   const addLang = (lang) => {
     console.log(lang);
