@@ -1,5 +1,5 @@
 # React_tutorial_2
-#04終了
+#05の途中
 以下のサイトを参考
 https://qiita.com/yassun-youtube/items/2ae26050efd2133c2286run
 
