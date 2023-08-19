@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       {description}
-      <List title="取り扱い言語一覧"/>
+      <List title="取り扱い言語一覧"/> 
       <button onClick={changeDescription}>ボタン</button>
 
     </div>
